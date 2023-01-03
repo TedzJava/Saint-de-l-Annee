@@ -1,0 +1,22 @@
+body{
+	background-color: gray;
+}
+a{
+	all: unset;
+	font-size: 200%;
+}
+section{
+	position: absolute;
+	left: 15%;
+	right: 15%;
+	bottom: 15%;
+	top: 15%;
+	background-image: conic-gradient(red, yellow, green, blue, black);
+}
+button{
+	position: relative;
+	left: 35%;
+	right: 35%;
+	bottom: 30%;
+	top: 30%;
+}

@@ -1,0 +1,23 @@
+body{
+	background-image: url(./fireworks.gif);
+}
+h1{
+	display: inline-block;
+	background-color: gray;
+	padding: 2ex;
+	font-family: sans-serif;
+}
+div#st{
+	display: inline-block;
+	position: absolute;
+	left: 30%;
+	right: 30%;
+	bottom: 30%;
+	top: 30%;
+	background-color: gray;
+	padding: 2ex;
+	text-align: center;
+	font-size: 200%;
+	font-family: sans-serif;
+	font-weight: bold;
+}

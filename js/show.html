@@ -1,0 +1,172 @@
+<!DOCTYFC html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>All Saints List</title>
+	<link rel="stylesheet" type="text/css" href="../css/show.css">
+</head>
+<body>
+	<h1>All Saints List</h1>
+	<div id='index'>
+		St => Saint
+		<br/>Bl => Blessed
+		<br/>Vn => Venerable
+		<br/>Ap => Apostle
+		<br/>Pp => Pope
+		<br/>M => Martyr
+		<br/>DC => Doctor of the Church
+		<br/>FC => Father of the Church
+	</div>
+	<div id='allSts'></div>
+
+	<script type="text/javascript">
+		saints = [
+			// A
+				'Alphonse Marie de Liguori (St, DC) ',
+				'Anne (St)',
+				'Anne Marie Taïgi (St)',
+				'Anselme de Cantorbéry (St, DC)',
+				'Antoine de Padoue (St, DC)',
+				'Antoine le Grand (St, FC)',
+				'Aphraate Le Sage Persan (St, ',
+				'Athanase d’Alexandrie (St, FC, DC)',
+				'Augustin d’Hippone (St, FC, DC)',
+				'Anthelme de Belley (St)',
+			// B
+				'Benoît de Nursie (St)',
+				'Basile Le Grand (St, DC)',
+				'Bernadette Soubirous (St) ',
+				'Bernard de Clairvaux (St, DC)',
+				'Brigitte de Suède (St)',
+				'Bonaventure (St, DC)',
+			// C
+				'Catherine d’Alexandrie (St, M)',
+				'Catherine de Sienne (St, DC)',
+				'Catherine Labouré (St)',
+				'Charbel Makhlouf (St)',
+				'Charles de Foucault (St)',
+				'Charles Lwanga (St, M)',
+				'Chiara Corbella Petrillo (Vn)',
+				'Claire d’Assise (St) ',
+				'Cyrille de Jérusalem (St, DC)',
+			// D
+				'Dina Bélanger (Bl)',
+				'Dominique Savio (St)',
+				'Dominique de Guzmán',
+			// E
+				'Ephrem Le Syrien (St, DC)',
+				'Elisabeth de La Trinité (Bl)',
+				'Estephan Nehme (Bl)',
+				'Eusèbe de Verceil (St)',
+			// F
+				'Faustine Kowalska (St, Ap)',
+				'Félicitée et Perpétue (St)',
+				'François d’Assise (St)',
+				'François de Sales (St, DC)',
+				'François et Jacinthe Marto (St)',
+				'François-Xavier (St)',
+				'Françoise Romaine (St) ',
+				'Franz Stock (Vn)',
+				'Franz Jagerstatter (Bl, M)',
+			// G
+				'Gemma Galgani (St)',
+				'Genadios Mourani (Moine OMM)',
+				'Geneviève de Paris (St)',
+				'Georges de Lydda (St, M)',
+				'Grégoire de Nazianze (St, FC, DC) ',
+			// H
+				'Hildegarde de Bingen (St, DC)',
+			// I
+				'Ignace de Loyola (St)',
+				'Isidore le Laboureur et Maria Toribia (St)',
+			// J
+				'Jacques de Ghazir (Bl)',
+				'Jacques Sevin (Vn)',
+				'Jean Bosco (St)',
+				'Jean de Cronstadt (St, OC)',
+				'Jean de La Croix (St, DC)',
+				'Jean Le Bien-Aimé (St, Ap)',
+				'Jean Marie Vianney (St)',
+				'Jean Paul II (St, Pp)',
+				'Jean XVIII (St, Pp)',
+				'Jeanne d’Arc (St, M)',
+				'Jérôme de Stridon (St, FC, DC)',
+				'Joseph de Cupertino (St)',
+				'Joseph Le Charpentier (St)',
+				'Joseph Moscatti (St)',
+				'Juan Diego Cuauhtlatoatzin (St)',
+				'Jude Thaddée (St, Ap)',
+				'Justine et Cyprien (St, M)',
+			// K
+			// L
+				'Léonie Aviat (St)',
+				'Léonie Martin (Vn)',
+				'Louis et Zélie Martin (St)',
+				'Louis Marie Grignon de Montfort (St)',
+			// M
+				'Macrine La Jeune (St)',
+				'Margueritte Bourgoys (St) ',
+				'Margueritte d’Antioche (St, M)',
+				'Margueritte Marie Alacoque (St)',
+				'Maria Goretti (St, M)',
+				'Marie de Jésus-Crucifié (St)',
+				'Marie Madelaine de Pazzi (St)',
+				'Martin de Tours (St, M)',
+				'Maximilien Kolbe (St, M)',
+				'Marie-Elisabeth Turgeon (Bl)',
+			// N
+				'Nehmet’alla Al Hardini (St)',
+				'Norbert de Xanten (St)',
+			// O
+				'Odile d’Alsace (St)',
+			// P
+				'Paul de La Croix (St)',
+				'Paul de Tarse (St, Ap)',
+				'Paul VI (St, Pp)',
+				'Philibert Vrau (Vn)',
+				'Philippe Néri (St)',
+				'Philomène de Rome (St, M)',
+				'Pie V (St, Pp)',
+				'Pierre Chrysologue (St, DC)',
+				'Pierre (St, Ap, Pp)',
+				'Pierre Fourier (St)',
+				'Pio de Pietrelcina (St)',
+			// Q
+			// R
+				'Rafka Choboq Al Rayes (St)',
+				'Rita de Cascia (St)',
+			// S
+				'Séraphim de Sarov (St, OC)',
+				'Suzanne (St, AT)',
+			// T
+				'Thérèse d’Avila (St, DC)',
+				'Thérèse de Calcutta (St)',
+				'Thérèse de l’Enfant Jésus et de La Sainte Face (St, DC)',
+				'Thomas Beckett (St, M)',
+				'Thomas d’Aquin (St, DC)',
+				'Thomas More (St, M)',
+			// U
+				'Valentin de Rome (St, M)',
+				'Véronique de La Sainte Face (St)',
+				'Véronique Giuliani (St)',
+				'Vincent de Paul (St)',
+				'Vincent Ferrier (St)',
+			// V
+			// W
+			// X
+			// Y
+			// Z
+				'Jean Baptiste (St, M)'
+		];
+
+		var allSaints = "";
+		for(let i = 0; i < saints.length; i++){
+			allSaints += ("<br/>" + saints[i]);
+		}
+		document.getElementById('allSts').innerHTML = allSaints;
+	</script>
+
+
+</body>
+</html>
